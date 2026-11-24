@@ -44,7 +44,7 @@ subject to $P_i^{\min}\le P_i\le P_i^{\max}$ and the ramp limits between consecu
 
 Choose the smallest $n$ such that the Fibonacci number covers the interval at the requested tolerance:
 
-$$F_n\ge\frac{u-\ell}{\text{tol}},\qquad F_n=F_{n-1}+F_{n-2},\quad F_0=0,\ F_1=1.$$
+$$F_n\ge\frac{u-\ell}{\text{tol}},\qquad F_n=F_{n-1}+F_{n-2},\quad F_0=0,~F_1=1.$$
 
 Evaluate the objective at the two interior points:
 
@@ -52,7 +52,7 @@ $$x_1=\ell+\frac{F_{n-2}}{F_n}(u-\ell),\qquad x_2=\ell+\frac{F_{n-1}}{F_n}(u-\el
 
 The worse half is discarded:
 
-$$\text{if } f(x_1)<f(x_2):\ u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):\ \ell\leftarrow x_1.$$
+$$\text{if } f(x_1)<f(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
 
 The final estimate is $x^{*}\approx(\ell+u)/2$. The Fibonacci ratios are the discrete version of the golden ratio, so each evaluation reuses one previous point.
 
