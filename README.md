@@ -154,6 +154,8 @@ Input data is **not included**. Place files in `data/` (notebooks) or next to th
 |---|---|
 | [`results/Result.xlsx`](results/Result.xlsx) | raw output |
 
+The workbooks hold the raw solver output behind the tables above: per-unit schedules, per-hour costs, constraint checks and run statistics.
+
 
 ## Requirements
 
