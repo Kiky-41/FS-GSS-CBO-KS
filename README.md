@@ -116,12 +116,13 @@ Input data is **not included**. Place files in `data/` (notebooks) or next to th
 
 ### Mean gap to the hybrid over the 24 hours
 
-| Method | GWO | WOA | PSO | ABC | DS |
-|---|---|---|---|---|---|
-| Mean cost (IDR) | 1,819,173,247.24 | 1,746,518,926.66 | 1,790,182,704.52 | 1,958,055,149.54 | 1,776,660,017.41 |
-| Mean gap (%) | 10.68 | 7.08 | 9.30 | 17.31 | 8.87 |
-| Narrowest gap (%) | 6.31 | 1.67 | 2.11 | 9.50 | 2.20 |
-| Widest gap (hour) | 14.25 (hour 11) | 10.86 (hour 14) | 26.36 (hour 4) | 23.74 (hour 13) | 16.46 (hour 7) |
+| Method | Mean cost (IDR) | Mean gap (%) | Narrowest gap (%) | Widest gap (hour) |
+|---|---|---|---|---|
+| GWO | 1,819,173,247.24 | 10.68 | 6.31 | 14.25 (hour 11) |
+| WOA | 1,746,518,926.66 | 7.08 | 1.67 | 10.86 (hour 14) |
+| PSO | 1,790,182,704.52 | 9.30 | 2.11 | 26.36 (hour 4) |
+| ABC | 1,958,055,149.54 | 17.31 | 9.50 | 23.74 (hour 13) |
+| DS | 1,776,660,017.41 | 8.87 | 2.20 | 16.46 (hour 7) |
 
 Averaged over the day the hybrid costs 1,627,311,403.62 IDR per hour. GWO is 10.68% above it at 1,819,173,247.24, PSO 9.30%, DS 8.87%, WOA 7.08% and ABC 17.31%. The narrowest margin in any single hour is 1.67% and the widest 26.36%, against PSO in hour 4.
 
