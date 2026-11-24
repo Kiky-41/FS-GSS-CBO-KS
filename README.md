@@ -52,7 +52,7 @@ $$x_1=\ell+\frac{F_{n-2}}{F_n}(u-\ell),\qquad x_2=\ell+\frac{F_{n-1}}{F_n}(u-\el
 
 The worse half is discarded:
 
-$$\text{if } f(x_1)<f(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
+$$\text{if } f(x_1)\ltf(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
 
 The final estimate is $x^{\ast}\approx(\ell+u)/2$. The Fibonacci ratios are the discrete version of the golden ratio, so each evaluation reuses one previous point.
 
@@ -66,7 +66,7 @@ with the same shrinking rule and final estimate $(\ell+u)/2$. The golden-section
 
 ### Hyper-heuristic switch
 
-$$\text{use Fibonacci if } u-\ell\ge50,\qquad \text{use golden section if } u-\ell<50.$$
+$$\text{use Fibonacci if } u-\ell\ge50,\qquad \text{use golden section if } u-\ell\lt50.$$
 
 The switch lets the method use Fibonacci's stronger shrinkage on wide intervals and golden section's cheaper refinement on narrow ones.
 
