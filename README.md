@@ -120,9 +120,14 @@ Input data is **not included**. Place files in `data/` (notebooks) or next to th
 
 ## Results
 
-### Result files
-
-- [`results/Result.xlsx`](results/Result.xlsx)
+| Metric | Value |
+|---|---|
+| Test case | 42-unit Jamali |
+| Best cost | IDR 39.05 billion |
+| Runtime | 0.49 s |
+| ABC comparison | 16.9% higher cost, over 5.6 s |
+| Search switch | Fibonacci when interval $\ge50$ MW, golden section below |
+| Result file | [`results/Result.xlsx`](results/Result.xlsx) |
 
 
 ## Requirements
