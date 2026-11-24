@@ -25,20 +25,14 @@ subject to $P_i^{\min}\le P_i\le P_i^{\max}$ and the ramp limits between consecu
 
 ### Notation
 
-| Symbol | Meaning | Unit |
-|---|---|---|
-| $N$ | number of units | – |
-| $P_i$ | output of unit $i$ | MW |
-| $a_i,b_i,c_i$ | cost coefficients (quadratic, linear, constant) | – |
-| $\lambda$ | balance penalty factor | – |
-| $P_D$ | demand | MW |
-| $F_n$ | $n$-th Fibonacci number | – |
-| $\varphi$ | golden ratio $(1+\sqrt5)/2$ | – |
-| $[\ell,u]$ | search interval for one unit | MW |
-| $x_1,x_2$ | interior evaluation points | MW |
-| $\varepsilon$ | Koch perturbation scale | – |
-| $f_x^{n},f_y^{n}$ | random coordinates on the Koch curve | – |
-| $a_i',b_i',c_i'$ | perturbed (cloned) coefficients | – |
+| Symbol | Meaning | Symbol | Meaning |
+|---|---|---|---|
+| $N$ | number of units | $\varphi$ | golden ratio $(1+\sqrt5)/2$ |
+| $P_i$ | output of unit $i$ (MW) | $[\ell,u]$ | search interval for one unit (MW) |
+| $a_i,b_i,c_i$ | cost coefficients (quadratic, linear, constant) | $x_1,x_2$ | interior evaluation points (MW) |
+| $\lambda$ | balance penalty factor | $\varepsilon$ | Koch perturbation scale |
+| $P_D$ | demand (MW) | $f_x^{n},f_y^{n}$ | random coordinates on the Koch curve |
+| $F_n$ | $n$-th Fibonacci number | $a_i',b_i',c_i'$ | perturbed (cloned) coefficients |
 
 ### Fibonacci search
 
