@@ -54,7 +54,7 @@ The worse half is discarded:
 
 $$\text{if } f(x_1)<f(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
 
-The final estimate is $x^{*}\approx(\ell+u)/2$. The Fibonacci ratios are the discrete version of the golden ratio, so each evaluation reuses one previous point.
+The final estimate is $x^{\ast}\approx(\ell+u)/2$. The Fibonacci ratios are the discrete version of the golden ratio, so each evaluation reuses one previous point.
 
 ### Golden-section search
 
@@ -96,7 +96,7 @@ Every clone is dispatched by FS/GSS and scored; the lowest-cost clone is retaine
 
 ### Implementation notes
 
-The notebook applies the hybrid search per unit with a scalar surrogate, `cost(x * ones)`, which repeats one unit's output across all units. It also has an earlier clone loop that calls the hybrid search with vector bounds; that branch returns the mean of the per-unit results, not a dispatch vector. The published results in `Result.xlsx` therefore cannot be reproduced by the notebook as committed. The method description above follows the paper and the intended vectorised implementation.
+The notebook applies the hybrid search per unit with a scalar surrogate, `cost(x \ast ones)`, which repeats one unit's output across all units. It also has an earlier clone loop that calls the hybrid search with vector bounds; that branch returns the mean of the per-unit results, not a dispatch vector. The published results in `Result.xlsx` therefore cannot be reproduced by the notebook as committed. The method description above follows the paper and the intended vectorised implementation.
 
 ## Contents
 
