@@ -52,7 +52,7 @@ $$x_1=\ell+\frac{F_{n-2}}{F_n}(u-\ell),\qquad x_2=\ell+\frac{F_{n-1}}{F_n}(u-\el
 
 The worse half is discarded:
 
-$$\text{if } f(x_1)\ltf(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
+$$\text{if } f(x_1)\lt f(x_2):~u\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):~\ell\leftarrow x_1.$$
 
 The final estimate is $x^{\ast}\approx(\ell+u)/2$. The Fibonacci ratios are the discrete version of the golden ratio, so each evaluation reuses one previous point.
 
@@ -116,6 +116,14 @@ Input data is **not included**. Place files in `data/` (notebooks) or next to th
 |---|---|
 | `input42u.xlsx` | Sheet1: `Unit`, `a`, `b`, `c`, `pmin`, `pmax`, `rampup`, `rampdown`, `load` |
 | `power_demand42u.xlsx` | Sheet1: `load` |
+
+
+## Results
+
+### Result files
+
+- [`results/Result.xlsx`](results/Result.xlsx)
+
 
 ## Requirements
 
