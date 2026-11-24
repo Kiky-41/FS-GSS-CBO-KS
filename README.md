@@ -12,6 +12,67 @@ Fibonacci Search + Golden Section Search + Clone-Based Optimization + Koch Snowf
 
 The Economic Load Dispatch (ELD) problem involves determining the most cost-effective allocation of power generation while satisfying system constraints. To address its complexity and improve performance, this study proposes a hybrid optimization framework named FS-GSS-CBO-KS. This method combines Fibonacci Search (FS) for global exploration, Golden Section Search (GSS) for fast local convergence, Clone-Based Optimization (CBO) for iterative refinement, and Koch Snowflake (KS) perturbations to maintain diversity and avoid local optima. Compared to established algorithms such as Grey Wolf Optimizer (GWO), Particle Swarm Optimization (PSO), Artificial Bee Colony (ABC), Differential Search (DS), and Whale Optimization Algorithm (WOA), FS-GSS-CBO-KS achieves the lowest total operational cost of approximately IDR 39.05 billion and the shortest computation time of 0.49 seconds. The ABC algorithm, in contrast, resulted in a 16.9% cost increase and required more than 5.6 seconds to compute. The proposed hybrid method demonstrates superior economic efficiency, fast convergence, and robust adaptability, making it a promising tool for large-scale ELD applications in dynamic power systems. Future research could expand the FS-GSS-CBO-KS framework to multi-objective Economic Load Dispatch (ELD), addressing not only fuel cost but also objectives such as emission reduction, system reliability, and power loss minimization. Including these would boost its relevance to modern power systems that prioritize both economic and environmental goals. Adapting the algorithm for renewable systems and distributed generation (DG) could enhance its use amid uncertainty and variability. Assessing impacts on power quality metrics, such as voltage stability and harmonic distortion, would broaden its operational utility. Conducting real-time tests in large-scale, practical scenarios would validate its robustness, scalability, and effectiveness.
 
+
+## Proposed method
+
+FS-GSS-CBO-KS is a hyper-heuristic for economic load dispatch. Each unit's coefficient triple $(a_i,b_i,c_i)$ is perturbed with Koch-snowflake steps, the perturbed coefficients define a one-dimensional cost function in the unit's output, and that function is minimised by Fibonacci search over wide intervals and golden-section search over narrow ones. Cloned candidates are evaluated and only improving clones survive.
+
+### Objective
+
+$$\min F(\mathbf{P})=\sum_{i=1}^{N}\left(a_iP_i^2+b_iP_i+c_i\right)+\lambda\left|P_D-\sum_iP_i\right|,\qquad \lambda=10^{6}$$
+
+subject to $P_i^{\min}\le P_i\le P_i^{\max}$ and ramp limits between consecutive loads.
+
+### Fibonacci search
+
+Choose the smallest $n$ such that
+
+$$F_n\ge\frac{b-a}{\text{tol}},\qquad F_n=F_{n-1}+F_{n-2},\quad F_0=0,\ F_1=1$$
+
+Evaluate the objective at
+
+$$x_1=a+\frac{F_{n-2}}{F_n}(b-a),\qquad x_2=a+\frac{F_{n-1}}{F_n}(b-a)$$
+
+and shrink:
+
+$$\text{if } f(x_1)<f(x_2):\ b\leftarrow x_2;\qquad \text{if } f(x_1)\ge f(x_2):\ a\leftarrow x_1$$
+
+Final estimate $x^*\approx\frac{a+b}{2}$.
+
+### Golden-section search
+
+$$\varphi=\frac{1+\sqrt5}{2},\qquad x_1=b-\frac{b-a}{\varphi},\qquad x_2=a+\frac{b-a}{\varphi}$$
+
+with the same shrinking rule and final estimate $(a+b)/2$.
+
+### Hyper-heuristic switch
+
+$$\text{use Fibonacci if } b-a\ge50,\qquad \text{use golden section if } b-a<50$$
+
+### Koch-snowflake perturbation
+
+For a segment from $(x_1,y_1)$ to $(x_2,y_2)$, the one-third, two-third and apex points are
+
+$$x_3=\frac{2x_1+x_2}{3},\quad y_3=\frac{2y_1+y_2}{3},\qquad x_4=\frac{x_1+2x_2}{3},\quad y_4=\frac{y_1+2y_2}{3}$$
+
+$$x_5=\frac{x_3+x_4}{2}-\frac{\sqrt3}{6}(y_4-y_3),\qquad y_5=\frac{y_3+y_4}{2}+\frac{\sqrt3}{6}(x_4-x_3)$$
+
+Random points $f_x^{n},f_y^{n}$ on the level-3 curve give the coefficient perturbations
+
+$$\Delta a_i=\varepsilon f_x^{n},\qquad \Delta b_i=\varepsilon f_y^{n},\qquad \Delta c_i=\varepsilon\left(f_x^{n}+f_y^{n}\right)$$
+
+with scale $\varepsilon=0.1$.
+
+### Clone-based refinement
+
+$$\mathbf{a}'=\mathbf{a}+\Delta\mathbf{a},\qquad \mathbf{b}'=\mathbf{b}+\Delta\mathbf{b},\qquad \mathbf{c}'=\mathbf{c}+\Delta\mathbf{c}$$
+
+Every clone is dispatched by FS/GSS and scored; the lowest-cost clone is retained for the next iteration, otherwise the incumbent parameters survive.
+
+### Reported result
+
+42-unit Jamali system: IDR 39.05 billion at 0.49 s, against 16.9% higher cost and over 5.6 s for ABC.
+
 ## Contents
 
 ```
