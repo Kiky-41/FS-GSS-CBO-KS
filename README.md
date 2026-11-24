@@ -132,11 +132,11 @@ Input data is **not included**. Place files in `data/` (notebooks) or next to th
 | DS | 1,628,733,387.87 | 1,649,406,997.21 | 1,578,369,171.05 | 1,615,405,778.50 | 1,539,160,854.52 | 1,577,547,540.08 | 1,674,159,650.05 | 1,575,213,992.40 | 1,566,769,552.53 | 1,600,967,974.75 | 1,696,608,072.41 | 1,584,893,266.06 | 1,601,240,715.63 | 1,617,556,164.13 | 1,723,241,595.34 | 1,775,431,215.26 | 1,907,691,146.01 | 2,004,701,779.57 | 2,040,153,619.20 | 2,127,671,259.86 | 2,197,195,787.90 | 2,184,996,027.89 | 2,132,090,453.30 | 2,040,634,416.45 |
 | FS time (s) | 0.0200 | 0.0194 | 0.0198 | 0.0199 | 0.0194 | 0.0195 | 0.0194 | 0.0198 | 0.0199 | 0.0236 | 0.0220 | 0.0206 | 0.0197 | 0.0195 | 0.0200 | 0.0299 | 0.0202 | 0.0202 | 0.0203 | 0.0196 | 0.0199 | 0.0202 | 0.0197 | 0.0194 |
 
+The hybrid is the cheapest method in all 24 hours. Mean saving is 10.68% against GWO, 9.30% against PSO, 8.87% against DS, 7.08% against WOA and 17.31% against ABC; the smallest margin in any hour is 1.67% and the largest 26.36% (against PSO). Daily cost sums to 39.06 billion IDR, and each hourly solve stays near 0.02 s.
+
 ### Result workbooks
 
-| File | Content |
-|---|---|
-| [`results/Result.xlsx`](results/Result.xlsx) | raw output |
+Raw solver output: [`results/Result.xlsx`](results/Result.xlsx).
 
 The workbooks hold the raw solver output behind the tables above: per-unit schedules, per-hour costs, constraint checks and run statistics.
 
