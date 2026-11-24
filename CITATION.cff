@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or results, you must cite the paper below (CC BY 4.0 attribution requirement)."
+title: "FS-GSS-CBO-KS: A Robust Self-Adaptive Hybrid Framework for the Dynamic Economic Load Dispatch Problem"
+type: software
+license: CC-BY-4.0
+repository-code: "https://github.com/Kiky-41/FS-GSS-CBO-KS"
+authors:
+  - family-names: "Yustika"
+    given-names: "Lindiasari Martha"
+  - family-names: "Ikhsan"
+    given-names: "Rifki Rahman Nur"
+  - family-names: "Raharjo"
+    given-names: "Jangkung"
+preferred-citation:
+  type: article
+  title: "A Robust Self-Adaptive Hybrid Framework for the Dynamic Economic Load Dispatch Problem"
+  authors:
+    - family-names: "Yustika"
+      given-names: "Lindiasari Martha"
+    - family-names: "Ikhsan"
+      given-names: "Rifki Rahman Nur"
+    - family-names: "Raharjo"
+      given-names: "Jangkung"
+  journal: "JOIV : International Journal on Informatics Visualization"
+  year: 2026
+  doi: 10.62527/joiv.10.3.3814

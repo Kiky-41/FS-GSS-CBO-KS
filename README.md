@@ -40,3 +40,11 @@ Python. Python notebooks: `numpy`, `pandas`, `scipy`, `matplotlib` (as imported)
 ```bibtex
 @article{Martha_Yustika_2026, title={A Robust Self-Adaptive Hybrid Framework for the Dynamic Economic Load Dispatch Problem}, volume={10}, ISSN={2549-9610}, url={http://dx.doi.org/10.62527/joiv.10.3.3814}, DOI={10.62527/joiv.10.3.3814}, number={3}, journal={JOIV : International Journal on Informatics Visualization}, publisher={Society of Visual Informatics}, author={Martha Yustika, Lindiasari and Rahman Nur Ikhsan, Rifki and Raharjo, Jangkung}, year={2026}, month=May, pages={1307} }
 ```
+
+## License
+
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Attribution is required**: any use of this code, results, or figures, including in publications, must cite:
+
+> Lindiasari Martha Yustika; Rifki Rahman Nur Ikhsan; Jangkung Raharjo (2026). A Robust Self-Adaptive Hybrid Framework for the Dynamic Economic Load Dispatch Problem. *JOIV : International Journal on Informatics Visualization*. https://doi.org/10.62527/joiv.10.3.3814
